@@ -15,12 +15,23 @@ const Navigation = () => {
     'MORE'
   ];
   return (
-    <nav className="container navbar level is-mobile scrollable">
-      {nav.map((elem) => {
-        return <a key={elem} className="navbar-item is-size-7" href={`categories/${elem.toLowerCase()}`}>{elem}</a>
-      })}
-      <a href="" />
-    </nav>
+    <div className="navigation">
+      <button className="navigation_arrow is-hidden-tablet">{'<'}</button>
+      <nav className="container navbar level is-mobile is-marginless scrollable">
+        {nav.map(elem => {
+          return (
+            <a
+              key={elem}
+              className="navbar-item is-size-7"
+              href={elem.toLowerCase() === 'home' ? `/` : `categories/${elem.toLowerCase()}`}
+            >
+              {elem}
+            </a>
+          );
+        })}
+      </nav>
+      <button className="navigation_arrow is-hidden-tablet">{'>'}</button>
+    </div>
   );
 };
 

@@ -6,7 +6,7 @@ const SingleArticle = props => {
   const { data } = props;
   const { title, author, excerpt, date, imageUrl, articleLength } = data;
   return (
-    <div className="article_has-hero-image">
+    <div className="article_has-hero-image is-paddingless">
       <figure className="article_image_hero">
         <img src={imageUrl} alt={title} />
       </figure>
@@ -28,7 +28,7 @@ const SingleArticleMiddle = props => {
   const { title, author, excerpt, date, imageUrl, articleLength } = data;
 
   return (
-    <div className="article_has-side-image">
+    <div className="article_has-side-image is-paddingless">
       <figure className="article_image_side">
         <img src={imageUrl} alt={title} />
       </figure>
@@ -59,7 +59,7 @@ class MainHero extends Component {
 
   render() {
     return (
-      <div className="section columns" style={{ borderBottom: '1px solid #eeeeee' }}>
+      <div className="section columns is-paddingless" style={{ borderBottom: '1px solid #eeeeee' }}>
         <div className="column">
           <SingleArticle type="first" data={data[0]} />
         </div>
@@ -68,7 +68,7 @@ class MainHero extends Component {
             <SingleArticleMiddle key={article.title} data={article} />
           ))}
         </div>
-        <div className="column is-hidden-touch">
+        <div className="column is-hidden-touch is-paddingless">
           <SingleArticle data={data[data.length - 1]} />
         </div>
       </div>

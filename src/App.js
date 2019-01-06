@@ -8,7 +8,7 @@ import 'normalize.css';
 class App extends Component {
   render() {
     return (
-      <div className="container is-fluid" style={{ margin: '0px 10px' }}>
+      <div className="container is-fluid is-marginless" style={{padding: '0px 15px'}}>
         <Header />
         <Navigation />
         <MainHero/>

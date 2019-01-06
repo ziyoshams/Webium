@@ -1,3 +1,24 @@
+.navigation{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.navigation > nav{
+  flex: 1;
+}
+
+.navigation_arrow{
+  background: #FFF;
+  border: none;
+  outline: none;
+}
+
+.navigation_arrow:active{
+  color: #777777;
+}
+
+
 .scrollable {
   overflow-x: auto;
 }
@@ -9,26 +30,6 @@
 @media screen and (max-width: 768px) {
   .scrollable {
     position: relative;
-  }
-
-  .scrollable:nth-child(1){
-    text-indent: 20px;
-  }
-
-  .scrollable::before {
-    content: '<';
-    color: red;
-    position: absolute;
-    background: white;
-    width: 15px;
-  }
-
-  .scrollable::after {
-    content: '>';
-    color: blue;
-    position: absolute;
-    right: 0;
-    background: #fff;
-    width: 15px;
+    display: flex;
   }
 }
