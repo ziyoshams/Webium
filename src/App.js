@@ -7,7 +7,7 @@ import 'normalize.css';
 class App extends Component {
   render() {
     return (
-      <div className="container is-fluid">
+      <div className="container is-fluid" style={{ margin: '0px 10px' }}>
         <Header />
         <Navigation />
       </div>
@@ -16,6 +16,5 @@ class App extends Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
 
 export default App;
